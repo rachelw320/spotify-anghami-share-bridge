@@ -7,7 +7,7 @@ There are two ios shortcuts, one for each direction. Both show up in the share s
 - [Send to spotify](https://www.icloud.com/shortcuts/cdfa0a6380d54acebf673811421cf302) (anghami -> spotify)
 - [Send to anghami](https://www.icloud.com/shortcuts/ced7af39e5fc4072a1e58a85c43fb925) (spotify -> anghami)
 
-Open the links on your iphone and tap add shortcut. They won't work straight away, you need to fill in two things in each one first
+Open the links on your iphone and tap add shortcut (or if you'd rather build them yourself, there are screenshots of every action further down). They won't work straight away, you need to fill in two things in each one first
 
 #### Setting them up
 
@@ -59,6 +59,12 @@ So they come up at the top of the share sheet straight away:
 
 #### 1. Send to anghami (spotify -> anghami)
 
+If you can't or don't want to use the icloud link, you can build it yourself from these screenshots (top to bottom, left to right) and the steps underneath
+
+<p>
+<img src="../docs/shortcuts/send-to-anghami-1.jpg" width="200" alt="send to anghami part 1"> <img src="../docs/shortcuts/send-to-anghami-2.jpg" width="200" alt="send to anghami part 2"> <img src="../docs/shortcuts/send-to-anghami-3.jpg" width="200" alt="send to anghami part 3"> <img src="../docs/shortcuts/send-to-anghami-4.jpg" width="200" alt="send to anghami part 4">
+</p>
+
 1. Receive urls (and other types) from the share sheet.
 2. Split the shortcut input by a custom separator of /, then get the last item. For a spotify link that's the track id followed by ?si=...
 3. Split that by ?, then get the first item. This is the spotify track id, saved as the TrackID variable
@@ -81,6 +87,12 @@ The worker sends back json with title, artist, anghami and musiclink fields.
 This one can take a few seconds, since musiclink sometimes has to resolve the track across platforms first
 
 #### 2. Send to spotify (anghami -> spotify)
+
+Same again for this one - screenshots top to bottom, left to right, then the steps.
+
+<p>
+<img src="../docs/shortcuts/send-to-spotify-1.jpg" width="200" alt="send to spotify part 1"> <img src="../docs/shortcuts/send-to-spotify-2.jpg" width="200" alt="send to spotify part 2"> <img src="../docs/shortcuts/send-to-spotify-3.jpg" width="200" alt="send to spotify part 3">
+</p>
 
 Anghami shares text like "Listen to “Song Title” by Artist Name on Anghami https://open.anghami.com/..." and the worker pulls the title and artist out of that.
 
