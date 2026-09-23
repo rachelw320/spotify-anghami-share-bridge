@@ -1,0 +1,33 @@
+# Runs the typecheck and tests on every push and pull request, so a broken change shows up as a red cross on github
+
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      # Stops wrangler asking to send usage stats
+      WRANGLER_SEND_METRICS: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # npm ci installs exactly what's in package-lock.json
+      - run: npm ci
+
+      - run: npm run typecheck
+
+      # The tests don't call spotify or musiclink, so no secrets needed here
+      - run: npm test

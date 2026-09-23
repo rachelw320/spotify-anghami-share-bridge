@@ -1,5 +1,7 @@
 ### Spotify <-> anghami share bridge
 
+[![ci](https://github.com/rachelw320/spotify-anghami-share-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/rachelw320/spotify-anghami-share-bridge/actions/workflows/ci.yml)
+
 A lightweight typescript and cloudflare workers service that converts shared tracks between spotify and anghami and integrates with ios shortcuts for one-tap whatsapp sharing
 
 #### Overview
@@ -73,6 +75,7 @@ The worker doesn't store anything apart from caching the spotify access token in
 - src/musiclink.ts - musiclink lookup
 - src/text.ts - share text parsing and string normalisation
 - test/index.spec.ts - unit tests and request validation tests
+- .github/workflows/ci.yml - runs the typecheck and tests on github on every push
 - shortcuts/README.md - ios shortcut setup
 - docs/architecture.png - the diagram above
 
@@ -80,7 +83,7 @@ The worker doesn't store anything apart from caching the spotify access token in
 
 You'll need:
 
-- Node.js 20 or later
+- Node.js 22 or later
 - A [cloudflare](https://dash.cloudflare.com/) account (the free plan is fine)
 - A spotify app from the [spotify developer dashboard](https://developer.spotify.com/dashboard) for a client id and client secret
 - A musiclink api key
@@ -115,7 +118,7 @@ curl "http://localhost:8787/?track=<spotify-track-id>"
 curl "http://localhost:8787/anghami-to-spotify?title=Song%20Title&artist=Artist%20Name"
 ```
 
-To run the checks:
+To run the checks (github actions runs these on every push too):
 
 ```bash
 npm run typecheck   # generates the workers runtime types, then runs tsc
