@@ -1,4 +1,4 @@
-### Spotify <-> anghami share bridge
+### Spotify <-> Anghami share bridge
 
 [![ci](https://github.com/rachelw320/spotify-anghami-share-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/rachelw320/spotify-anghami-share-bridge/actions/workflows/ci.yml)
 
