@@ -139,11 +139,11 @@ Wrangler prints the worker url (https://{worker-name}.{your-subdomain}.workers.d
 
 #### IOS shortcut setup
 
-The steps for both shortcuts (send to anghami and send to spotify) are in [shortcuts/README.md](shortcuts/README.md). The last step in each one opens a whatsapp link like wa.me/447XXXXXXXXX?text={message}.
+You can install both shortcuts straight from icloud: [send to spotify](https://www.icloud.com/shortcuts/cdfa0a6380d54acebf673811421cf302) and [send to anghami](https://www.icloud.com/shortcuts/ced7af39e5fc4072a1e58a85c43fb925). You'll need to replace the placeholders in square brackets (brackets included) with your own worker url and whatsapp number - the full steps are in [shortcuts/README.md](shortcuts/README.md). The last step in each one opens a whatsapp link like wa.me/447XXXXXXXXX?text={message}.
 
 Swap in the recipient's number in international format, or leave the number out and whatsapp will ask you which chat to send it to.
 
-It's a good idea to favourite both shortcuts in 'edit actions' (at the bottom of the share sheet) so they come up straight away when you press share
+It's a good idea to add both shortcuts to your favourites (share sheet -> edit actions at the bottom -> tap the green +) so they come up at the top straight away when you press share
 
 #### Limitations
 
