@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Wrangler local state and generated types (regenerate with `npm run cf-typegen`)
+.wrangler/
+worker-configuration.d.ts
+
+# Local secrets: never commit
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
+
+# Build output, coverage and logs
+dist/
+coverage/
+*.log
+*.map
+
+# Exported iOS Shortcuts can contain personal contacts or URLs
+*.shortcut
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

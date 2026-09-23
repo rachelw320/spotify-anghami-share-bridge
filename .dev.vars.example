@@ -1,0 +1,5 @@
+# Copy to .dev.vars for local development (`npm run dev`). Never commit .dev.vars.
+# In production, set each value with `npx wrangler secret put <NAME>`.
+SPOTIFY_CLIENT_ID=your_spotify_client_id
+SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
+MUSICLINK_API_KEY=your_musiclink_api_key

@@ -1,0 +1,14 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	// Worker name. Together with your account's workers.dev subdomain this forms the public URL,
+	// so renaming it deploys a new Worker at a new URL.
+	"name": "spotify-to-anghami",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-09-23",
+
+	// Values are never stored here: set them with `wrangler secret put <NAME>` (production)
+	// or in `.dev.vars` (local development). See `.dev.vars.example`.
+	"secrets": {
+		"required": ["SPOTIFY_CLIENT_ID", "SPOTIFY_CLIENT_SECRET", "MUSICLINK_API_KEY"]
+	}
+}
