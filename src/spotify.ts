@@ -44,7 +44,7 @@ async function getAccessToken({ clientId, clientSecret }: SpotifyCredentials): P
 	});
 
 	if (!response.ok) {
-		throw new Error(`Couldn't log in to spotify (status ${response.status}), soz`);
+		throw new Error(`Couldn't log in to spotify (status ${response.status})`);
 	}
 
 	const data = (await response.json()) as SpotifyTokenResponse;

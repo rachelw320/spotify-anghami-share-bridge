@@ -26,13 +26,13 @@ async function handleSpotifyToAnghami(params: URLSearchParams, env: Env): Promis
 	const spotifyUrl = `https://open.spotify.com/track/${encodeURIComponent(trackId)}`;
 	const track = await lookupTrack(spotifyUrl, env.MUSICLINK_API_KEY);
 	if (!track) {
-		return errorResponse(404, "Couldn't find that spotify track, soz");
+		return errorResponse(404, "Couldn't find that spotify track :(");
 	}
 
 	// Chop off the tracking bits at the end of the link
 	const anghami = track.links?.anghami?.split('?')[0];
 	if (!anghami) {
-		return errorResponse(404, "Couldn't find this one on anghami, sozza", { title: track.title, artist: track.artist });
+		return errorResponse(404, "Couldn't find this one on anghami :(", { title: track.title, artist: track.artist });
 	}
 
 	return Response.json({
@@ -90,7 +90,7 @@ export default {
 			}
 			return await handleSpotifyToAnghami(url.searchParams, env);
 		} catch (error) {
-			return errorResponse(500, error instanceof Error ? error.message : 'Something went wrong and no idea what, soz');
+			return errorResponse(500, error instanceof Error ? error.message : 'Something went wrong, not sure what :(');
 		}
 	},
 } satisfies ExportedHandler<Env>;
